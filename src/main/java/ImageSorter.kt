@@ -1,4 +1,3 @@
-
 import java.awt.image.*
 import java.io.File
 import java.util.*
@@ -7,16 +6,17 @@ import javax.imageio.ImageIO
 object ImageSorter {
 	@JvmStatic
 	fun main(args: Array<String>) {
-		val file = File("image.png")
-		val image = readImage(file)
-		val pixels = extractPixels(image!!)
+		val input = "input.png"
+		val output = "output.png"
+		val image = ImageIO.read(File(input))
 
+		val pixels = extractPixels(image!!)
 		Arrays.sort(pixels)
 
 		val newImage = BufferedImage(image.width, image.height, BufferedImage.TYPE_INT_RGB)
 		newImage.setRGB(0, 0, image.width, image.height, pixels, 0, image.width)
 
-		writeImage(newImage)
+		ImageIO.write(newImage, getExtension(output), File(output))
 	}
 
 	private fun extractPixels(fileImage: BufferedImage): IntArray {
@@ -25,7 +25,5 @@ object ImageSorter {
 		return (image.raster.dataBuffer as DataBufferInt).data
 	}
 
-	private fun readImage(file: File) = ImageIO.read(file)
-
-	private fun writeImage(image: BufferedImage) = ImageIO.write(image, "png", File("output.png"))
+	private fun getExtension(fileName: String) = fileName.substring(fileName.lastIndexOf('.') + 1)
 }
