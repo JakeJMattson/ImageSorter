@@ -5,6 +5,7 @@ import java.util.*
 import javax.imageio.ImageIO
 
 object ImageSorter {
+	@JvmStatic
 	fun main(args: Array<String>) {
 		val file = File("image.png")
 		val image = readImage(file)
