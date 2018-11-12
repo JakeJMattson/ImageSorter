@@ -1,4 +1,11 @@
-# ImageSorter
+<p align="center">
+  <a href="https://kotlinlang.org/">
+    <img src="https://img.shields.io/badge/Kotlin-1.3.0-blue.svg" alt="Kotlin 1.3.0">
+  </a>
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/github/license/JakeJMattson/ImageSorter.svg">
+  </a>
+</p>
 
 <p align="justify">
 A literal approach to sorting images. 
