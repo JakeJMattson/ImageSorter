@@ -3,7 +3,7 @@
     <img src="https://img.shields.io/badge/Kotlin-1.3.0-blue.svg" alt="Kotlin 1.3.0">
   </a>
   <a href="LICENSE.md">
-    <img src="https://img.shields.io/github/license/JakeJMattson/ImageSorter.svg">
+    <img src="https://img.shields.io/github/license/JakeJMattson/ImageSorter.svg" alt="license">
   </a>
 </p>
 
@@ -32,3 +32,6 @@ This project is built with Maven. To build the `pom.xml`, please follow the impo
 * [IntelliJ](https://www.tutorialspoint.com/maven/maven_intellij_idea.htm)
 * [Eclipse](https://www.tutorialspoint.com/maven/maven_eclispe_ide.htm)
 * [NetBeans](https://www.tutorialspoint.com/maven/maven_netbeans.htm)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
