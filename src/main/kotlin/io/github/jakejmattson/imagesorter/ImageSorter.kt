@@ -1,3 +1,5 @@
+package io.github.jakejmattson.imagesorter
+
 import java.awt.image.*
 import java.io.File
 import java.util.*
