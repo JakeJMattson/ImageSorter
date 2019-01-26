@@ -19,13 +19,12 @@ Deliberately useless.
 * [Kotlin](https://kotlinlang.org/)
 
 ## Getting Started (Software)
+### Installing Java
 <p align="justify">
-The version numbers for each additional software used to build this project are listed in the badges at the top of the page. These dependencies are handled by Maven during build. If building manually, other versions may work, but this is not guaranteed.
+Visit the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Downloads</a> 
+page and select the version of your choice.
+Run the installer and follow the instructions provided.
 </p>
-
-### Installing Kotlin
-**Note:** Included as Maven dependency. Below are manual instructions.
-Kotlin can be added to your project manually by following the instructions on the Kotlin website. It supports [IntelliJ](https://kotlinlang.org/docs/tutorials/getting-started.html), [Eclipse](https://kotlinlang.org/docs/tutorials/getting-started-eclipse.html), or a simple [command line compiler](https://kotlinlang.org/docs/tutorials/command-line.html).
 
 ## Building
 This project is built with Maven. To build the `pom.xml`, please follow the import instructions for your IDE.
