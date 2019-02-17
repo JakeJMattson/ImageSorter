@@ -4,7 +4,7 @@ import java.awt.image.*
 import java.io.File
 import javax.imageio.ImageIO
 
-fun main(args: Array<String>) {
+fun main() {
 	val input = File("input.png")
 	val output = File("output.png")
 	val image = ImageIO.read(input)!!
