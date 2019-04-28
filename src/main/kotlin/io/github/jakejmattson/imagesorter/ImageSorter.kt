@@ -10,7 +10,7 @@ fun main() {
 	val image = ImageIO.read(input)!!
 
 	with(image) {
-		val pixels = extractPixels().also { it.sort() }
+		val pixels = extractPixels().sorted().toIntArray()
 
 		val newImage = BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
 		newImage.setRGB(0, 0, width, height, pixels, 0, width)
@@ -21,6 +21,6 @@ fun main() {
 
 private fun BufferedImage.extractPixels() =
 	with (BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)) {
-		graphics.drawImage(this, 0, 0, null)
+		graphics.drawImage(this@extractPixels, 0, 0, null)
 		(raster.dataBuffer as DataBufferInt).data
 	}
