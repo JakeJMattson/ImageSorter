@@ -9,18 +9,13 @@ fun main() {
 	val output = File("output.png")
 	val image = ImageIO.read(input)!!
 
-	with(image) {
-		val pixels = extractPixels().sorted().toIntArray()
+	val newImage =
+		with (BufferedImage(image.width, image.height, BufferedImage.TYPE_INT_RGB)) {
+			graphics.drawImage(image, 0, 0, null)
+			val pixels = (raster.dataBuffer as DataBufferInt).data.sorted().toIntArray()
+			setRGB(0, 0, width, height, pixels, 0, width)
+			this
+		}
 
-		val newImage = BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
-		newImage.setRGB(0, 0, width, height, pixels, 0, width)
-
-		ImageIO.write(newImage, output.extension, output)
-	}
+	ImageIO.write(newImage, output.extension, output)
 }
-
-private fun BufferedImage.extractPixels() =
-	with (BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)) {
-		graphics.drawImage(this@extractPixels, 0, 0, null)
-		(raster.dataBuffer as DataBufferInt).data
-	}
